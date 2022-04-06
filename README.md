@@ -1,1 +1,3 @@
-# Covid_Dashboard
+# Covid Dashboard
+
+![Dashboard Grafana](Covid_Dashboard.png)
