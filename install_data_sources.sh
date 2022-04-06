@@ -1,0 +1,1 @@
+curl --user admin:admin "http://localhost:3000/api/datasources" -X POST -H 'Content-Type: application/json; charset=UTF8' --data-binary '{"name": "Covid-Vaccinations", "type": "mysql", "url":"db:3306", "database":"vaccinations", "user":"root", "password":"example", "sslmode":"disable", "access":"proxy"}'
