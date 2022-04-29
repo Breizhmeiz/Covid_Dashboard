@@ -49,3 +49,17 @@ Le livrable est un lien vers un dépôt GitHub qui contient, OBLIGATOIREMENT :
 - [~] un README très détaillé du travail fait pour obtenir le dashboard (en Markdown)
 
 ![Dashboard Grafana](Covid_Dashboard.png)
+
+Pour la partie Base de donnée :
+- Les exports de la base de données MySQL (`./mysql-dump/*.sql`) sont importés au lancement du conteneur MySQL (répertoire `/docker-entrypoint-initdb.d`)
+- Les données sont persistées dans un volume docker (covid_dashboard_db)
+- Un coneeneur Adminer est addossé à la base de données pour pouvoir y accéder simplement.
+
+
+Pour la partie Visualisation :
+- Les dashboards sont provisionnés dans le répertoire `./grafana-dashboards` : ils seront automatiquement importés au lancement du conteneur Grafana.
+- Les gréfons `Geomap` et `grafana-worldmap-panel` sont installés au lancement du conteneur Grafana, car déclarés dans une variable d'environnement `GF_INSTALL_PLUGINGS`.
+- La source de données est ajoutée en lançant le script `install-datasources.sh`. Ç'eut été plus simple de la provisionner directement comme les dashboards, mais l'exercice de passer par un appel à l'API était intéressant.
+
+
+La connexion au dashboards est faite à l'adresse : http://localhost:3000/ dans un Grafana prêt à l'emploi.
