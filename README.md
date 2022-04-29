@@ -44,8 +44,8 @@ Evaluation par le formateur.
 ## Livrables
 
 Le livrable est un lien vers un dépôt GitHub qui contient, OBLIGATOIREMENT :
-- une capture d'écran du dashborad GRAFANA,
-- le docker compose de la stack,
-- un README très détaillé du travail fait pour obtenir le dashboard (en Markdown)
+- [X] une capture d'écran du dashborad GRAFANA,
+- [X] le docker compose de la stack,
+- [~] un README très détaillé du travail fait pour obtenir le dashboard (en Markdown)
 
 ![Dashboard Grafana](Covid_Dashboard.png)
